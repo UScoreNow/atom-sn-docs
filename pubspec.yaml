@@ -1,0 +1,27 @@
+name: uscorenow_design_system
+description: >-
+  UScoreNow design-system-v2 — tema editorial 'newsprint' para Flutter
+  (mobile-first + web, light/dark). Tokens DTCG en tokens/tokens.json.
+version: 2.0.0
+publish_to: none
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+  flutter: ">=3.22.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Libre Caslon Display (serif de masthead/headline) se carga via google_fonts;
+  # NO se registra como asset.
+  google_fonts: ^6.2.1
+
+flutter:
+  # ElmsSans (variable, OFL): familia sans del sistema. La serif va por
+  # google_fonts, no aqui.
+  fonts:
+    - family: ElmsSans
+      fonts:
+        - asset: assets/fonts/elms_sans/ElmsSans-VariableFont.ttf
+        - asset: assets/fonts/elms_sans/ElmsSans-Italic-VariableFont.ttf
+          style: italic
