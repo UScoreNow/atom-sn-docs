@@ -56,11 +56,19 @@ Ejemplos:
 
 ```yaml
 icon_foundation:
-  library: "hugeicons"
+  library: "hugeicons"            # ^1.1.7
   flutter_package: "package:hugeicons/hugeicons.dart"
-  primary_style: "HugeIconsStrokeRounded"
+  primary_style: "strokeRounded"  # constantes HugeIcons.strokeRounded<Nombre>
   base_widget: "HugeIcon"
+  token_map: "lib/theme/app_icons.dart"  # AppIcons: mapa canonico (semantica -> icono)
 ```
+
+> **Fuente canónica del mapeo:** `lib/theme/app_icons.dart` (`AppIcons.*`). Los
+> componentes referencian `AppIcons.navigationHome`, etc., nunca `HugeIcons.*` directo.
+> Algunos identificadores reales de hugeicons 1.1.7 difieren de este catálogo (escrito con
+> la convención antigua `HugeIconsStrokeRounded.home01`): p.ej. `trophy01`→`Champion`,
+> `radioButton01`→`RadioButton`, `stadium`→`FootballPitch`, `user01`→`UserCircle`,
+> `lock01`→`Lock`, `inbox01`→`Inbox`. `AppIcons` ya usa los nombres válidos.
 
 ---
 

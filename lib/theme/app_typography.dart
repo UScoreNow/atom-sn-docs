@@ -22,7 +22,6 @@
 //     el letterSpacing de kicker (0.08em * size).
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 /// Composiciones [TextStyle] del tema 'newsprint'.
 ///
@@ -83,13 +82,15 @@ abstract final class AppTypography {
     );
   }
 
-  /// Estilo serif (Libre Caslon Display, solo w400) via google_fonts.
-  static TextStyle _serifStyle({
+  /// Estilo de display editorial (ElmsSans, w400). Antes serif (Libre Caslon);
+  /// el sistema unifica masthead/headline en ElmsSans.
+  static TextStyle _displayStyle({
     required double size,
     required double height,
     double trackingEm = _trackNormal,
   }) {
-    return GoogleFonts.libreCaslonDisplay(
+    return TextStyle(
+      fontFamily: _sans,
       fontSize: size,
       fontWeight: _regular,
       height: height,
@@ -97,26 +98,25 @@ abstract final class AppTypography {
     );
   }
 
-  // -- text.masthead (serif) ------------------------------------------------
+  // -- text.masthead (display) ----------------------------------------------
 
   /// text.masthead.xl — nameplate de pantalla/seccion. 60px, snug→tight.
   static TextStyle get mastheadXl =>
-      _serifStyle(size: 48, height: _tight, trackingEm: _trackTight)
-          .copyWith(fontSize: 60);
+      _displayStyle(size: 60, height: _tight, trackingEm: _trackTight);
 
   /// text.masthead.lg — 32px, snug, tight tracking.
   static TextStyle get mastheadLg =>
-      _serifStyle(size: 32, height: _snug, trackingEm: _trackTight);
+      _displayStyle(size: 32, height: _snug, trackingEm: _trackTight);
 
-  // -- text.headline (serif) ------------------------------------------------
+  // -- text.headline (display) ----------------------------------------------
 
   /// text.headline.xl — titular editorial/cronica. 32px, snug.
   static TextStyle get headlineXl =>
-      _serifStyle(size: 32, height: _snug, trackingEm: _trackNormal);
+      _displayStyle(size: 32, height: _snug, trackingEm: _trackNormal);
 
   /// text.headline.lg — 24px, snug.
   static TextStyle get headlineLg =>
-      _serifStyle(size: 24, height: _snug, trackingEm: _trackNormal);
+      _displayStyle(size: 24, height: _snug, trackingEm: _trackNormal);
 
   // -- text.display (sans, tabular) -----------------------------------------
 

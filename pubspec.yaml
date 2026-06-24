@@ -12,13 +12,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # Libre Caslon Display (serif de masthead/headline) se carga via google_fonts;
-  # NO se registra como asset.
-  google_fonts: ^6.2.1
+  # Iconografia unica del sistema: Hugeicons (estilo strokeRounded).
+  hugeicons: ^1.1.7
 
 flutter:
-  # ElmsSans (variable, OFL): familia sans del sistema. La serif va por
-  # google_fonts, no aqui.
+  # ElmsSans (variable, OFL): unica familia del sistema (sans + display).
   fonts:
     - family: ElmsSans
       fonts:
