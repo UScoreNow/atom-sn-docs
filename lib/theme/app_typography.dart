@@ -1,4 +1,4 @@
-// UScoreNow design-system-v2 — tema editorial 'newsprint'.
+// AtomSN — tema editorial 'newsprint'.
 // Composiciones tipograficas derivadas 1:1 de tokens.json (bloque "text").
 //
 // Duotono:

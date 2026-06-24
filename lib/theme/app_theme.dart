@@ -1,4 +1,4 @@
-// UScoreNow design-system-v2 — tema editorial 'newsprint'.
+// AtomSN — tema editorial 'newsprint'.
 // Ensamblado de ThemeData (light/dark) a partir de AppColors y AppTypography.
 //
 // El color sale de AppColors (app_colors.dart), derivado de la capa

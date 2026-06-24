@@ -1,4 +1,4 @@
-# Design System — UScoreNow · Tema editorial "newsprint"
+# AtomSN — Design System · Tema editorial "newsprint"
 
 > **Versión:** 2.0
 > **Estado:** En desarrollo
@@ -36,7 +36,7 @@ El sistema histórico imponía dos invariantes que v2 rompe de forma **explícit
 ## Índice de artefactos
 
 ```
-design-system-v2/
+atom-sn-design-system/
 ├── tokens/
 │   └── tokens.json       # FUENTE ÚNICA DE VERDAD (formato DTCG). Color, tipografía,
 │                         #   espaciado, radios, reglas. Toda decisión sale de aquí.

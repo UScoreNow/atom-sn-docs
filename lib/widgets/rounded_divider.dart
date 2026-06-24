@@ -1,4 +1,4 @@
-// UScoreNow design-system-v2 — regla editorial con extremos redondeados.
+// AtomSN — regla editorial con extremos redondeados.
 //
 // Equivalente a [Divider] de Material, pero la linea se dibuja como un
 // contenedor con [BorderRadius], de modo que los extremos quedan redondeados

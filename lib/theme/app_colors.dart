@@ -1,6 +1,6 @@
 import 'package:flutter/painting.dart';
 
-/// Paleta base de UScoreNow design-system-v2, tema editorial "newsprint".
+/// Paleta base de AtomSN, tema editorial "newsprint".
 ///
 /// Fuente unica de verdad: tokens/tokens.json (formato DTCG).
 /// Todos los valores son `const Color(0xFF......)` con los hex exactos de

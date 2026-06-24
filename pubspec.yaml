@@ -1,6 +1,6 @@
-name: uscorenow_design_system
+name: atom_sn_design_system
 description: >-
-  UScoreNow design-system-v2 — tema editorial 'newsprint' para Flutter
+  AtomSN — tema editorial 'newsprint' para Flutter
   (mobile-first + web, light/dark). Tokens DTCG en tokens/tokens.json.
 version: 2.0.0
 publish_to: none
