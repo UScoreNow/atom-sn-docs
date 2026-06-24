@@ -172,3 +172,7 @@ Consumir `tokens/tokens.json` (formato DTCG) directamente o vía pipeline de tra
 ---
 
 > **Fuente única de verdad:** `tokens/tokens.json`. Ningún hex, nombre de token ni decisión tipográfica vive fuera de él. La documentación describe; los tokens deciden.
+
+## Contributing
+
+This repository follows the [UScoreNow contribution guidelines](https://github.com/UScoreNow/.github/blob/main/CONTRIBUTING.md): branching model, Conventional Commits, pull requests and releases.
