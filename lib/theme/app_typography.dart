@@ -1,11 +1,11 @@
 // UScoreNow design-system-v2 — tema editorial 'newsprint'.
 // Composiciones tipograficas derivadas 1:1 de tokens.json (bloque "text").
 //
-// Duotono:
-//   - serif  = Libre Caslon Display (solo w400) via google_fonts. SOLO
-//     masthead/headline/display-titular. Nunca <20px ni en cuerpo.
-//   - sans   = ElmsSans (variable, registrada en pubspec). Cuerpo, UI,
-//     labels, captions y stats.
+// Familia unica: ElmsSans (variable, registrada en pubspec) para TODO el texto
+// —masthead, headline y display incluidos—. La jerarquia de titulares se logra
+// con tamano y peso, no con una segunda familia.
+// (Historico: el display uso el serif Libre Caslon Display via google_fonts; el
+// sistema se unifico en ElmsSans y se elimino esa dependencia.)
 //
 // Convenciones aplicadas desde tokens:
 //   - letterSpacing en px = tracking(em) * fontSize. tokens.font.tracking:
