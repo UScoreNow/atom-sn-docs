@@ -21,9 +21,6 @@ try:
 except (OSError, ValueError) as e:
     errors.append(f"tokens/tokens.json invalid: {e}")
     raw = ""
-for forbidden in re.findall(r"#(?:000000|FFFFFF)\b", raw, flags=re.IGNORECASE):
-    # allowed only inside the $meta.rules.forbidden declaration
-    pass
 hexes = re.findall(r'"\$value"\s*:\s*"(#[0-9A-Fa-f]{6})"', raw)
 for h in hexes:
     if h.upper() in ("#000000", "#FFFFFF"):
