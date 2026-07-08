@@ -1,43 +1,45 @@
-# Sistema de Espaciado — Tema editorial AtomSN
+# Spacing System — AtomSN Editorial Theme
 
-> **Versión:** 2.0 · **Plataforma:** Flutter (mobile-first + web) · **Unidad base:** 4px
+> Language: English (canonical for AI agents). Versión en español: [spacing-es.md](spacing-es.md)
 
-## Dirección visual
+> **Version:** 2.0 · **Platform:** Flutter (mobile-first + web) · **Base unit:** 4px
 
-Sistema de espaciado basado en múltiplos de 4px. Garantiza ritmo visual consistente entre elementos, secciones y pantallas de la app.
+## Visual direction
 
-El espaciado debe sentirse cómodo, predecible y estructural. La densidad por defecto es media: ni demasiado comprimida para pantallas de datos, ni demasiado abierta para una app de consulta rápida de resultados.
+Spacing system based on multiples of 4px. It guarantees consistent visual rhythm between elements, sections, and screens of the app.
 
-En AtomSN el espaciado adopta el lenguaje del periódico: la maquetación se ordena con reglas (filos hairline 1px, regla de sección 2px), columnas con un gutter fijo y kickers/overlines pegados a su titular. Las esquinas tienden a lo recto: el periódico prefiere el filo, y `radius.none` es el borde editorial por defecto de reglas, sellos y tablas. `radius.md` se mantiene como el estándar de cards.
+Spacing should feel comfortable, predictable, and structural. The default density is medium: neither too compressed for data-heavy screens, nor too open for an app built for quick score checks.
 
----
-
-## Principios
-
-- Todo el espaciado proviene de la escala base de 4px; no se usan valores arbitrarios.
-- Los componentes consumen tokens semánticos de espaciado, no valores crudos directamente.
-- La densidad visual puede ajustarse cambiando los tokens semánticos sin tocar la escala base.
-- El padding horizontal de pantalla es fijo y uniforme en toda la app.
-- El radio de borde pertenece a este sistema: consistencia visual de cards, botones e inputs.
-- Editorial: las esquinas tienden a lo recto. Reglas, sellos ("FINAL") y tablas de clasificación usan `radius.none`. Los radios redondeados se reservan para superficies de interacción (cards, sheets, botones).
-- Las reglas (reglas hairline y de sección) son elementos de maquetación: su grosor sale de `border.*`, no de la escala de espaciado.
-- Los layouts multi-columna (tablas, grids, web) usan un gutter de columna único y fijo.
+In AtomSN spacing adopts the language of the newspaper: layout is organized with rules (1px hairline edges, 2px section rule), columns with a fixed gutter, and kickers/overlines tucked against their headline. Corners tend toward the straight edge: the newspaper prefers the sharp edge, and `radius.none` is the default editorial edge for rules, stamps, and tables. `radius.md` remains the standard for cards.
 
 ---
 
-## Restricciones base
+## Principles
 
-- Valor mínimo de espaciado: `space.1` (4px)
-- Valor máximo del sistema: `space.20` (80px)
-- No usar valores fuera de la escala (ej: 6px, 10px, 15px)
-- El radio de borde máximo para elementos rectangulares: `radius.xl` (24px)
-- `radius.full` se reserva para elementos circulares (avatares, dots de estado, badges, pills)
-- `radius.none` es el borde por defecto del utillaje editorial (reglas, sellos, tablas)
-- Grosores de regla: solo `border.hairline` (1px) y `border.section` (2px); no inventar grosores intermedios
+- All spacing comes from the 4px base scale; no arbitrary values are used.
+- Components consume semantic spacing tokens, not raw values directly.
+- Visual density can be adjusted by changing the semantic tokens without touching the base scale.
+- Horizontal screen padding is fixed and uniform across the entire app.
+- Border radius belongs to this system: visual consistency of cards, buttons, and inputs.
+- Editorial: corners tend toward the straight edge. Rules, stamps ("FINAL"), and standings tables use `radius.none`. Rounded radii are reserved for interaction surfaces (cards, sheets, buttons).
+- Rules (hairline and section rules) are layout elements: their thickness comes from `border.*`, not from the spacing scale.
+- Multi-column layouts (tables, grids, web) use a single, fixed column gutter.
 
 ---
 
-## Convención de nombres
+## Base constraints
+
+- Minimum spacing value: `space.1` (4px)
+- Maximum system value: `space.20` (80px)
+- Do not use values outside the scale (e.g., 6px, 10px, 15px)
+- Maximum border radius for rectangular elements: `radius.xl` (24px)
+- `radius.full` is reserved for circular elements (avatars, status dots, badges, pills)
+- `radius.none` is the default edge for editorial furniture (rules, stamps, tables)
+- Rule thicknesses: only `border.hairline` (1px) and `border.section` (2px); do not invent intermediate thicknesses
+
+---
+
+## Naming convention
 
 ```text
 # Escala base de espaciado:
@@ -53,11 +55,11 @@ border.{nivel}
 spacing.{componente}.{propiedad}.{tamaño}
 ```
 
-Ejemplos: `space.4` (16px), `space.6` (24px), `radius.md`, `radius.none`, `border.hairline`, `spacing.card.padding.md`, `spacing.column.gap`, `spacing.overline.gap`
+Examples: `space.4` (16px), `space.6` (24px), `radius.md`, `radius.none`, `border.hairline`, `spacing.card.padding.md`, `spacing.column.gap`, `spacing.overline.gap`
 
 ---
 
-## Escala base
+## Base scale
 
 ```yaml
 raw_spacing:
@@ -119,9 +121,9 @@ raw_spacing:
 
 ---
 
-## Radio de borde
+## Border radius
 
-Editorial: radios contenidos. El periódico prefiere esquinas rectas o levemente redondeadas. `radius.md` sigue siendo el estándar de cards; `radius.none` es el borde recto del utillaje editorial (reglas, sellos, tablas).
+Editorial: restrained radii. The newspaper prefers straight or slightly rounded corners. `radius.md` remains the standard for cards; `radius.none` is the straight edge of editorial furniture (rules, stamps, tables).
 
 ```yaml
 border_radius:
@@ -166,20 +168,20 @@ border_radius:
     usage: avatares, dots de estado, badges circulares, botones pill
 ```
 
-### Guía editorial de radios
+### Editorial radius guide
 
-- Reglas, filos y separadores: `radius.none`. Una regla redondeada no existe en un periódico.
-- Sellos de tinta (`accent.ink`, p. ej. "FINAL"): `radius.none`. El sello es un bloque recto.
-- Tablas de clasificación y sus celdas/filas: `radius.none`. Los líderes punteados y las cifras tabulares viven en una rejilla recta.
-- Cards, sheets, modales: `radius.md`.
-- Inputs y botones secundarios: `radius.sm`. Botones primarios pueden usar `radius.sm`/`radius.md` según peso visual.
-- Elementos circulares (avatares, dots, pills): `radius.full`.
+- Rules, edges, and separators: `radius.none`. A rounded rule does not exist in a newspaper.
+- Ink stamps (`accent.ink`, e.g. "FINAL"): `radius.none`. The stamp is a straight-edged block.
+- Standings tables and their cells/rows: `radius.none`. Dotted leaders and tabular figures live on a straight grid.
+- Cards, sheets, modals: `radius.md`.
+- Inputs and secondary buttons: `radius.sm`. Primary buttons may use `radius.sm`/`radius.md` depending on visual weight.
+- Circular elements (avatars, dots, pills): `radius.full`.
 
 ---
 
-## Grosores de regla (border)
+## Rule thicknesses (border)
 
-Las reglas son la herramienta de maquetación del periódico. Su grosor vive en `border.*` y su color en los tokens semánticos `border.hairline` / `border.section` (ver color.md). El grosor es independiente del color y de la escala de espaciado.
+Rules are the newspaper's layout tool. Their thickness lives in `border.*` and their color in the semantic tokens `border.hairline` / `border.section` (see color.md). Thickness is independent of color and of the spacing scale.
 
 ```yaml
 border_width:
@@ -203,9 +205,9 @@ raw_spacing usage note: |
 
 ---
 
-## Tokens semánticos
+## Semantic tokens
 
-Espaciado listo para usar en producto. Los componentes deben consumir estos tokens.
+Spacing ready to use in product. Components must consume these tokens.
 
 ```yaml
 semantic_spacing:
@@ -335,15 +337,15 @@ semantic_spacing:
 
 ---
 
-## SafeArea y zonas del sistema
+## SafeArea and system zones
 
-`SafeArea` y los tokens `spacing.screen.*` son **capas distintas y complementarias**. No se reemplazan entre sí.
+`SafeArea` and the `spacing.screen.*` tokens are **distinct, complementary layers**. They do not replace each other.
 
 ---
 
-## Integración Flutter
+## Flutter integration
 
-### EdgeInsets desde la escala
+### EdgeInsets from the scale
 
 ```dart
 // Equivalentes directos de los tokens base
@@ -366,7 +368,7 @@ const EdgeInsets buttonPaddingMd = EdgeInsets.symmetric(
 );
 ```
 
-### BorderRadius desde la escala
+### BorderRadius from the scale
 
 ```dart
 // radius.none — borde recto editorial: reglas, sellos, tablas
@@ -382,7 +384,7 @@ const BorderRadius radiusMd = BorderRadius.all(Radius.circular(12));
 const BorderRadius radiusFull = BorderRadius.all(Radius.circular(9999));
 ```
 
-### Reglas editoriales (border)
+### Editorial rules (border)
 
 ```dart
 // border.hairline — filo fino (1px). Color: border.hairline (paper.300 light)
@@ -402,7 +404,7 @@ const Border sectionRule = Border(
 );
 ```
 
-### SizedBox y gaps
+### SizedBox and gaps
 
 ```dart
 // Separación vertical entre secciones (spacing.screen.section.gap)
@@ -423,16 +425,15 @@ const SizedBox overlineGap = SizedBox(height: 4);
 
 ---
 
-## Relación entre espaciado y tipografía
+## Relationship between spacing and typography
 
-| Contexto | Token tipográfico | Padding / gap recomendado |
+| Context | Typography token | Recommended padding / gap |
 |---|---|---|
-| Botón con `text.label.lg` | 14px / medium | `spacing.button.padding.md` |
-| Ítem de lista con `text.body.md` | 14px / regular | `spacing.list.item.padding.*` |
-| Card con `text.title.lg` | 20px / semibold | `spacing.card.padding.md` |
-| Chip con `text.label.md` | 12px / medium | `spacing.button.padding.sm` |
-| Input con `text.body.lg` | 16px / regular | `spacing.input.padding.*` |
-| Overline `text.overline` sobre titular `text.headline.*` | 12px / semibold mayúsculas | `spacing.overline.gap` (4px) |
-| Columnas de `text.stat.*` / tabla de clasificación | tabular | `spacing.column.gap` (16px) + `radius.none` |
-| Masthead `text.masthead.*` con regla inferior | serif display | `border.section` (2px) + `space.4` de aire |
-```
+| Button with `text.label.lg` | 14px / medium | `spacing.button.padding.md` |
+| List item with `text.body.md` | 14px / regular | `spacing.list.item.padding.*` |
+| Card with `text.title.lg` | 20px / semibold | `spacing.card.padding.md` |
+| Chip with `text.label.md` | 12px / medium | `spacing.button.padding.sm` |
+| Input with `text.body.lg` | 16px / regular | `spacing.input.padding.*` |
+| Overline `text.overline` above headline `text.headline.*` | 12px / semibold uppercase | `spacing.overline.gap` (4px) |
+| `text.stat.*` columns / standings table | tabular | `spacing.column.gap` (16px) + `radius.none` |
+| Masthead `text.masthead.*` with bottom rule | serif display | `border.section` (2px) + `space.4` of air |

@@ -1,5 +1,7 @@
 # Utillaje editorial — Tema AtomSN
 
+> Idioma: español (para humanos). English version: [editorial-en.md](editorial-en.md)
+
 > **Versión:** 2.0 · **Plataforma:** Flutter (mobile-first + web) · **Temas:** light "AtomSN Light" / dark "AtomSN Dark"
 
 ## Dirección visual

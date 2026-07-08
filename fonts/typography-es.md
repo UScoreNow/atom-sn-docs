@@ -1,5 +1,7 @@
 # Sistema Tipográfico — UScoreNow (tema editorial AtomSN)
 
+> Idioma: español (para humanos). English version: [typography-en.md](typography-en.md)
+
 > **Versión:** 2.1 · **Plataforma:** Flutter (mobile-first + web) · **Modelo:** FAMILIA ÚNICA (ElmsSans)
 
 ## Dirección visual
