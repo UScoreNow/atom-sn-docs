@@ -1,5 +1,7 @@
 # Sistema de Iconos — UScoreNow AtomSN
 
+> Idioma: español (para humanos). English version: [icons-en.md](icons-en.md)
+
 > **Versión:** 2.0 · **Tema:** AtomSN · **Plataforma:** Flutter (mobile-first + web) · **Librería:** Hugeicons
 
 ## Dirección visual

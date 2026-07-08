@@ -1,5 +1,7 @@
 # Sistema de Colores — Tema editorial AtomSN
 
+> Idioma: español (para humanos). English version: [colors-en.md](colors-en.md)
+
 > **Versión:** 2.0 · **Plataforma:** Flutter (mobile-first + web) · **Temas:** light "AtomSN Light" / dark "AtomSN Dark"
 
 ## Dirección visual
