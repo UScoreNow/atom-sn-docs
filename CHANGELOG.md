@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.1](https://github.com/UScoreNow/atom-sn-docs/compare/v0.2.0...v0.2.1) (2026-07-08)
+
+
+### Bug Fixes
+
+* drop retired brand name from changelog entry ([9cdef0d](https://github.com/UScoreNow/atom-sn-docs/commit/9cdef0d7574f30bec13f920b85db72fdf3465ecc))
+* elimina el nombre de marca retirado del changelog ([ff4f3a8](https://github.com/UScoreNow/atom-sn-docs/commit/ff4f3a82762f98cfd39c9e492d57cde551f5007b))
+
 ## [0.2.0](https://github.com/UScoreNow/atom-sn-design-system/compare/v0.1.0...v0.2.0) (2026-06-24)
 
 
